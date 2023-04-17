@@ -107,7 +107,145 @@ y *= 2  # equivalent to y = y * 2
 print(y)
 
 
-##if-elif-else statements in python
+##Conditional statements
+# if, elif, else
+
+#if statement:
+x = 10
+if x > 5:
+    print("x is greater than 5")
+
+#If-else statement:
+x = 3
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is less than or equal to 5")
+
+#If-elif-else statement:
+x = 7
+if x < 0:
+    print("x is negative")
+elif x == 0:
+    print("x is zero")
+else:
+    print("x is positive")
+
+#Nested if statements
+x = 10
+if x > 5:
+    if x < 15:
+        print("x is between 5 and 15")
+        
+
+#all combined example
+
+value = int(input("Enter a number: "))
+if value > 0:
+    
+    print("x is positive")
+    
+    if value < 50:
+        print("x is a small positive number")
+        
+    elif value < 100:
+        print("x is a medium positive number")
+        
+    else:
+        print("x is a large positive number")
+        
+elif value == 0:
+    print("x is zero")
+    
+elif value < 0:
+    print("x is negative")
+    
+else:
+    print("x is not a number")
+    
+##Loops
+
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    print(x)
+
+i = 1
+while i < 6:
+    print(i)
+    i += 1 # i = i + 1
+
+adj = ["red", "big", "tasty"]
+fruits = ["apple", "banana", "cherry"]
+
+for x in adj:
+    for y in fruits:
+        print(x, y)
+
+#break statement
+print("break statement")
+i = 1
+while i < 6:
+    print(i)
+    if i == 3:
+        break
+    i += 1
+    
+fruits = ["apple", "banana", "cherry", "orange", "kiwi"]
+
+for fruit in fruits:
+    if fruit == "cherry":
+        break
+    print(fruit)
 
 
+    
+#continue statement
+print("continue statement")
+i = 0
+while i < 6:
+    i += 1
+    if i == 3:
+        continue
+    print(i) 
+    
+fruits = ["apple", "banana", "cherry", "orange", "kiwi"]
 
+for fruit in fruits:
+    if fruit == "cherry":
+        continue
+    print(fruit)
+
+
+#range function
+print("range function")
+for x in range(6):
+    print(x)
+
+##Functions
+
+def greet(name):
+    print("Hello, " + name + "!")
+
+greet("Alice")
+
+def square(x):
+    return x * x
+
+print (square(4))
+
+
+##NOEL EXAMPLE TIME
+
+
+##Arrays in python
+
+fruits = ["apple", "banana", "cherry", "orange", "kiwi"]
+
+print(fruits[0])  # prints "apple"
+print(fruits[1])  # prints "banana"
+
+fruits[2] = "pear"  # replace "cherry" with "pear"
+
+fruits.append("grape")  # add "grape" to the end of the list
+
+print(fruits)  # prints ["apple", "banana", "pear", "orange", "kiwi", "grape"]
